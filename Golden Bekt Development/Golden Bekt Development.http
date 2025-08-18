@@ -1,0 +1,6 @@
+@Golden_Bekt_Development_HostAddress = http://localhost:5073
+
+GET {{Golden_Bekt_Development_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
