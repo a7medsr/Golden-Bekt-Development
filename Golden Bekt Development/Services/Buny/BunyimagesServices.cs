@@ -11,8 +11,8 @@ namespace FX.Services.Bunny
     public class BunyimagesServices : IBunyimagesServices
     {
         private const string BASE_HOSTNAME = "storage.bunnycdn.com";
-        private const string STORAGE_ZONE_NAME = "goldenatthenetproject";  // Replace with your actual storage zone name
-        private const string ACCESS_KEY = "08389c76-91cc-4c81-8d8353fb6f0f-9c88-463e";  // Replace with your actual access key
+        private const string STORAGE_ZONE_NAME = "myzoneeee";  
+        private const string ACCESS_KEY = "ce761aa9-bb87-4037-8b854cec90c7-9bf5-4091"; 
         private const string CONTENT_TYPE = "application/octet-stream";
 
         public BunyimagesServices()
