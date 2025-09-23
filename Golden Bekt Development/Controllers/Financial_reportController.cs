@@ -51,7 +51,7 @@ namespace Golden_Bekt_Development.Controllers
                     return BadRequest(new { error = uploadResult.ErrorMessage });
                 }
 
-                uploadedUrl = $"https://this0is0my0pull0zone.b-cdn.net/programs/{uploadResult.FileName}";
+                uploadedUrl = $"https://konouz.b-cdn.net/programs/{uploadResult.FileName}";
             }
 
             var entity = _mapper.Map<Financial_report>(dto);
@@ -76,7 +76,7 @@ namespace Golden_Bekt_Development.Controllers
                     return BadRequest(new { error = uploadResult.ErrorMessage });
                 }
 
-                existingEntity.ReportURL = $"https://this0is0my0pull0zone.b-cdn.net/programs/{uploadResult.FileName}";
+                existingEntity.ReportURL = $"https://konouz.b-cdn.net/programs/{uploadResult.FileName}";
             }
 
             var currentUrl = existingEntity.ReportURL;

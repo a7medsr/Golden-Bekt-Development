@@ -11,9 +11,10 @@ namespace FX.Services.Bunny
     public class BunyimagesServices : IBunyimagesServices
     {
         private const string BASE_HOSTNAME = "storage.bunnycdn.com";
-        private const string STORAGE_ZONE_NAME = "goldenatthenetproject";  // Replace with your actual storage zone name
-        private const string ACCESS_KEY = "08389c76-91cc-4c81-8d8353fb6f0f-9c88-463e";  // Replace with your actual access key
+        private const string STORAGE_ZONE_NAME = "konouuz";  // Replace with your actual storage zone name
+        private const string ACCESS_KEY = "2b18bea9-a16e-4695-9dd305f6dc68-bc2c-4eef";  // Replace with your actual access key
         private const string CONTENT_TYPE = "application/octet-stream";
+
 
         public BunyimagesServices()
         {
@@ -26,7 +27,7 @@ namespace FX.Services.Bunny
 
         public async Task<byte[]> DownloadImage(string FolderName, string fileName)
         {
-            var client = new RestClient($"https://storage.bunnycdn.com/FXe/{FolderName}/{fileName}");
+            var client = new RestClient($"https://storage.bunnycdn.com/konouuz/{FolderName}/{fileName}");
             var request = new RestRequest();
             request.AddHeader("accept", "*/*");
             request.AddHeader("AccessKey", ACCESS_KEY);
@@ -45,7 +46,7 @@ namespace FX.Services.Bunny
 
         public Task<string> GetImageUrl(string FolderName, string fileName)
         {
-            string url = $@"https://fxcandle.b-cdn.net/{FolderName}/{fileName}";
+            string url = $@"https://konouz.b-cdn.net/{FolderName}/{fileName}";
             return Task.FromResult(url);
         }
 
@@ -60,7 +61,7 @@ namespace FX.Services.Bunny
 
             string fileNameToUpload = image.FileName.Replace(" ", "_");
             string url = $@"https://{BASE_HOSTNAME}/{STORAGE_ZONE_NAME}/{FolderName}/{fileNameToUpload}";
-            string Imageurl = $@"https://fxcandle.b-cdn.net/{FolderName}/{fileNameToUpload}";
+            string Imageurl = $@"https://konouz.b-cdn.net/{FolderName}/{fileNameToUpload}";
 
             using (HttpClient client = new HttpClient())
             {

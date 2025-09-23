@@ -51,7 +51,7 @@ namespace Golden_Bekt_Development.Controllers
                     return BadRequest(new { error = uploadResult.ErrorMessage });
                 }
 
-                uploadedUrl = $"https://this0is0my0pull0zone.b-cdn.net/programs/{uploadResult.FileName}";
+                uploadedUrl = $"https://konouz.b-cdn.net/programs/{uploadResult.FileName}";
             }
 
             var entity = _mapper.Map<Partners_of_Success>(dto);
@@ -76,7 +76,7 @@ namespace Golden_Bekt_Development.Controllers
                     return BadRequest(new { error = uploadResult.ErrorMessage });
                 }
 
-                existingEntity.PartnerUrl = $"https://this0is0my0pull0zone.b-cdn.net/programs/{uploadResult.FileName}";
+                existingEntity.PartnerUrl = $"https://konouz.b-cdn.net/programs/{uploadResult.FileName}";
             }
 
             var currentUrl = existingEntity.PartnerUrl;

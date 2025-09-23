@@ -46,7 +46,7 @@ public class ProgramController : ControllerBase
                 return BadRequest(new { error = uploadResult.ErrorMessage });
             }
 
-            uploadedUrl = $"https://this0is0my0pull0zone.b-cdn.net/programs/{uploadResult.FileName}";
+            uploadedUrl = $"https://konouz.b-cdn.net/programs/{uploadResult.FileName}";
         }
         var entity = _mapper.Map<programs>(dto);
         entity.ProgramUrl = uploadedUrl;
@@ -73,7 +73,7 @@ public class ProgramController : ControllerBase
             }
 
             // Build public URL with your pull zone
-            existingEntity.ProgramUrl = $"https://this0is0my0pull0zone.b-cdn.net/programs/{uploadResult.FileName}";
+            existingEntity.ProgramUrl = $"https://konouz.b-cdn.net/programs/{uploadResult.FileName}";
             
 
         }
