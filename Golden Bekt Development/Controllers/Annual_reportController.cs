@@ -54,6 +54,7 @@ namespace Golden_Bekt_Development.Controllers
                 uploadedUrl = $"https://konouz.b-cdn.net/programs/{uploadResult.FileName}";
             }
 
+
             var entity = _mapper.Map<Annual_report>(dto);
             entity.ReportURL = uploadedUrl;
 
